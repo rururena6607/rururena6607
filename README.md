@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm HIROSHI 👋</h1>
+<h1 align="center">Hi 👋</h1>
 
 <p align="center">
   Web開発・IoT・信号処理に取り組む学生エンジニアです。<br>
