@@ -76,4 +76,4 @@
 
 ## 📫 Contact
 
-[![GitHub](https://img.shields.io/badge/GitHub-rururena6607-181717?style=flat&logo=github)](https://github.com/rururena6607)
+[![Instagram](https://img.shields.io/badge/Instagram-hiroshi__4869-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/hiroshi_4869/)
