@@ -1,16 +1,87 @@
-## Hi there 👋
+<h1 align="center">Hi, I'm HIROSHI 👋</h1>
 
-<!--
-**rururena6607/rururena6607** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<p align="center">
+  Web開発・IoT・信号処理に取り組む学生エンジニアです。<br>
+  現実の課題をテクノロジーで解決することに興味があります。
+</p>
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🚀 Projects
+
+### [CPR Dash](https://github.com/rururena6607/CPRDASH) — AED緊急出動管理システム
+
+> **管理者がマップ上で事故現場を指定すると、半径500m以内のAEDボックス（ESP32）がLED点滅・音声アラートで自動通知し、救助者をナビゲートするリアルタイム救急支援システム**
+
+**主な機能**
+- 管理者Webアプリから事故現場をマップ指定 → Firebase経由でAED端末へリアルタイム配信
+- ESP32デバイスがLED（NeoPixel 24灯）と音声で現場アラートを発報
+- QRコードスキャンで救助者スマホにナビゲーション表示
+- Firebase Realtime Database による双方向データ同期
+
+**使用技術**
+
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=flat&logo=leaflet&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
+
+---
+
+### [PBL-B](https://github.com/rururena6607/PBL-B) — エアレスポンプ稼働音声解析システム
+
+> **防爆室内にセンサーを設置できない工場環境において、室外から録音した音声データを解析し、塗装機の稼働回数を自動カウントするデスクトップ解析ツール**
+
+**主な機能**
+- WAVファイルの一括バッチ解析・稼働イベント自動検出
+- 15〜20kHz帯域パスフィルタによる金属音ノイズ除去
+- クレストファクタを用いたファイル事前スクリーニング
+- 動的閾値調整（局所ノイズレベルに適応）
+- 波形ビューア・エンベロープ表示・ピーク可視化
+- タイムスタンプ付きCSVエクスポート
+
+**検証実績:** 1分間音声125ファイル・合計3,852回の稼働検出
+
+**使用技術**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat&logo=scipy&logoColor=white)
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+
+**Backend / Data**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+
+**Embedded / IoT**
+
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=rururena6607&show_icons=true&theme=tokyonight&hide_border=true" height="150"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rururena6607&layout=compact&theme=tokyonight&hide_border=true" height="150"/>
+</p>
+
+---
+
+## 📫 Contact
+
+[![GitHub](https://img.shields.io/badge/GitHub-rururena6607-181717?style=flat&logo=github)](https://github.com/rururena6607)
