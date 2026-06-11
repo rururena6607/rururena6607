@@ -8,7 +8,7 @@
 
 ## 🚀 Projects
 
-### [CPR Dash](https://github.com/rururena6607/CPRDASH) — AED緊急出動管理システム
+### [CPR DASH](https://github.com/rururena6607/CPRDASH) — AED緊急出動管理システム
 
 > **管理者がマップ上で事故現場を指定すると、半径500m以内のAEDボックス（ESP32）がLED点滅・音声アラートで自動通知し、救助者をナビゲートするリアルタイム救急支援システム**
 
