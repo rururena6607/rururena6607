@@ -8,7 +8,32 @@
 
 ## 🚀 Projects
 
-### [CPR DASH](https://github.com/rururena6607/CPRDASH) — AED緊急出動管理システム
+### CPR BEAT — CPR訓練システム
+
+> **救命講習を「義務」から「エンターテインメント」へ。リズムゲーム感覚で胸骨圧迫の正しいリズムと深さを身体で覚えられる、高専発のCPRトレーニングシステム**
+
+**主な機能**
+- リアルタイムフィードバックで圧迫のリズム・深さを採点（Hampel法による独自ノイズ除去アルゴリズムで高精度判定）
+- 既存の訓練人形に後付けできるラック＆ピニオン式の外付け深度センサー（低コスト・高精度）
+- QRコードでトレーニング結果をスマホに保存、成長をグラフ化。緊急時マニュアル・クイズ機能も搭載
+- 個人プレイからチーム対戦まで対応
+
+**受賞歴**
+- 第36回全国高等専門学校プログラミングコンテスト **最優秀賞・文部科学大臣賞** ほか（情報処理学会／電子情報通信学会 若手奨励賞、チームラボ企業賞、NICT賞）
+- BCN ITジュニア賞
+- 令和7年度 起業家甲子園 NICT理事長賞・SGインキュベート賞
+
+**使用技術**
+
+![Unity](https://img.shields.io/badge/Unity-100000?style=flat&logo=unity&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+
+---
+
+### CPR DASH — AED緊急出動管理システム
 
 > **管理者がマップ上で事故現場を指定すると、半径500m以内のAEDボックス（ESP32）がLED点滅・音声アラートで自動通知し、救助者をナビゲートするリアルタイム救急支援システム**
 
@@ -29,7 +54,7 @@
 
 ---
 
-### [PBL-B](https://github.com/rururena6607/PBL-B) — エアレスポンプ稼働音声解析システム
+### PBL-B — エアレスポンプ稼働音声解析システム
 
 > **防爆室内にセンサーを設置できない工場環境において、室外から録音した音声データを解析し、塗装機の稼働回数を自動カウントするデスクトップ解析ツール**
 
@@ -51,24 +76,77 @@
 
 ---
 
+### NITK365 — 高専生活ポータルアプリ
+
+> **「これ一つ開けば、学校の今がすべてわかる」。イベント・課題・学食・バス電車・部活動などを統合する、熊本高専の学生生活ポータル（Web）**
+
+**主な機能**
+- 学内Googleアカウント（`@g.kumamoto-nct.ac.jp`）限定のSSOログイン（学外アカウントは自動サインアウト）
+- 行事カレンダーの作成・編集・表示
+- 課題まとめ：ソース別（Classroom / Teams / WebClass / 手動）管理、期限による色分け・警告バナー
+- Teams連携API（Power Automate からDBへ直接登録）
+- 受験生向け匿名Q&A、落とし物、学内知恵袋、学食メニュー など全10機能を設計
+- 管理者・教職員・学生・OB・ゲストの5段階権限とガバナンス（通報・操作ログ）
+
+**使用技術**
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+
+---
+
+### もふっと — ペット推し活プラットフォーム
+
+> **保護犬猫を「アイドルのように推せる」プラットフォーム。「寄付」ではなく「推す・贈る・応援する」体験で、一頭ずつの個性と物語を主役にする**
+
+**主な機能**
+- 推し活フィード：推せる子の一覧（推し数・性格タグ・物語）
+- 子の詳細：性格まるわかりカードと物語、応援／迎えるCTA
+- 4段ラダーの応援（おやつ → 継続 → 医療費 → 里親）
+- おうち日記：迎えた後の成長記録を共有、迎えた子が次の「推し」に
+- 応援額の使い道を透明に公開する設計思想
+
+**使用技術**
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+
+---
+
 ## 🛠️ Tech Stack
 
 **Frontend**
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 
 **Backend / Data**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white)
 
-**Embedded / IoT**
+**Game / Embedded / IoT**
 
+![Unity](https://img.shields.io/badge/Unity-100000?style=flat&logo=unity&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
 ![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)
+
+**Infra**
+
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
 
 ---
 
