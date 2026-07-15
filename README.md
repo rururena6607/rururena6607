@@ -207,4 +207,5 @@
 
 ## 📫 Contact
 
+[![Email](https://img.shields.io/badge/Email-te23hirohashi@g.kumamoto--nct.ac.jp-D14836?style=flat&logo=gmail&logoColor=white)](mailto:te23hirohashi@g.kumamoto-nct.ac.jp)
 [![Instagram](https://img.shields.io/badge/Instagram-hiroshi__4869-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/hiroshi_4869/)
