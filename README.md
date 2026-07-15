@@ -6,7 +6,67 @@
 
 ---
 
-## 🚀 Projects
+## 📂 ソースコードが見られるプロジェクト
+
+コードを公開している2件です。それぞれのリポジトリに、設計意図・技術的な工夫をまとめたREADMEを置いています。
+
+| プロジェクト | 概要 | ソースコード | デモ |
+|---|---|---|---|
+| **もふっと** | 保護犬猫の「推し活」プラットフォーム（Next.js / TypeScript） | [rururena6607/mofutto](https://github.com/rururena6607/mofutto) | [mofutto.vercel.app](https://mofutto.vercel.app) |
+| **PBL-B** | 工場の稼働音を解析して塗装機の動作回数を自動カウント（Python） | [rururena6607/PBL-B](https://github.com/rururena6607/PBL-B) | — |
+
+---
+
+### もふっと — ペット推し活プラットフォーム
+
+[![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/mofutto)
+[![Demo](https://img.shields.io/badge/デモ-mofutto.vercel.app-000000?style=flat&logo=vercel&logoColor=white)](https://mofutto.vercel.app)
+
+> **保護犬猫を「アイドルのように推せる」プラットフォーム。「寄付」ではなく「推す・贈る・応援する」体験で、一頭ずつの個性と物語を主役にする**
+
+**主な機能**
+- 推し活フィード：推せる子の一覧（推し数・性格タグ・物語）
+- 子の詳細：性格まるわかりカードと物語、応援／迎えるCTA
+- 4段ラダーの応援（おやつ → 継続 → 医療費 → 里親）
+- おうち日記：迎えた後の成長記録を共有、迎えた子が次の「推し」に
+- 応援額の使い道を透明に公開する設計思想
+
+**使用技術**
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+
+---
+
+### PBL-B — エアレスポンプ稼働音声解析システム
+
+[![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/PBL-B)
+
+> **防爆室内にセンサーを設置できない工場環境において、室外から録音した音声データを解析し、塗装機の稼働回数を自動カウントするデスクトップ解析ツール**（大学PBL授業における企業連携プロジェクト）
+
+**主な機能**
+- WAVファイルの一括バッチ解析・稼働イベント自動検出
+- 15〜20kHz帯域パスフィルタによる金属音ノイズ除去
+- クレストファクタを用いたファイル事前スクリーニング
+- 動的閾値調整（局所ノイズレベルに適応）
+- 波形ビューア・エンベロープ表示・ピーク可視化
+- タイムスタンプ付きCSVエクスポート
+
+**検証実績:** 1分間音声125ファイル・合計3,852回の稼働検出
+
+**使用技術**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat&logo=scipy&logoColor=white)
+
+---
+
+## 🔒 その他の開発実績（ソースコード非公開）
+
+チーム・学校・企業との共同開発のため、ソースコードは公開していません。
 
 ### CPR BEAT — CPR訓練システム
 
@@ -54,28 +114,6 @@
 
 ---
 
-### PBL-B — エアレスポンプ稼働音声解析システム
-
-> **防爆室内にセンサーを設置できない工場環境において、室外から録音した音声データを解析し、塗装機の稼働回数を自動カウントするデスクトップ解析ツール**
-
-**主な機能**
-- WAVファイルの一括バッチ解析・稼働イベント自動検出
-- 15〜20kHz帯域パスフィルタによる金属音ノイズ除去
-- クレストファクタを用いたファイル事前スクリーニング
-- 動的閾値調整（局所ノイズレベルに適応）
-- 波形ビューア・エンベロープ表示・ピーク可視化
-- タイムスタンプ付きCSVエクスポート
-
-**検証実績:** 1分間音声125ファイル・合計3,852回の稼働検出
-
-**使用技術**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
-![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat&logo=scipy&logoColor=white)
-
----
-
 ### NITK365 — 高専生活ポータルアプリ
 
 > **「これ一つ開けば、学校の今がすべてわかる」。イベント・課題・学食・バス電車・部活動などを統合する、熊本高専の学生生活ポータル（Web）**
@@ -96,26 +134,6 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
-
----
-
-### もふっと — ペット推し活プラットフォーム
-
-> **保護犬猫を「アイドルのように推せる」プラットフォーム。「寄付」ではなく「推す・贈る・応援する」体験で、一頭ずつの個性と物語を主役にする**
-
-**主な機能**
-- 推し活フィード：推せる子の一覧（推し数・性格タグ・物語）
-- 子の詳細：性格まるわかりカードと物語、応援／迎えるCTA
-- 4段ラダーの応援（おやつ → 継続 → 医療費 → 里親）
-- おうち日記：迎えた後の成長記録を共有、迎えた子が次の「推し」に
-- 応援額の使い道を透明に公開する設計思想
-
-**使用技術**
-
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
 
 ---
 
