@@ -8,11 +8,12 @@
 
 ## 📂 ソースコードが見られるプロジェクト
 
-コードを公開している2件です。それぞれのリポジトリに、設計意図・技術的な工夫をまとめたREADMEを置いています。
+コードを公開している3件です。それぞれのリポジトリに、設計意図・技術的な工夫をまとめたREADMEを置いています。
 
-| プロジェクト | 概要 | ソースコード | デモ |
+| プロジェクト | 概要 | ソースコード | 公開サイト |
 |---|---|---|---|
 | **もふっと** | 保護犬猫の「推し活」プラットフォーム（Next.js / TypeScript） | [rururena6607/mofutto](https://github.com/rururena6607/mofutto) | [mofutto.vercel.app](https://mofutto.vercel.app) |
+| **CPR BEAT 公式サイト** | 素のHTML/CSS/JSで構築した静的サイト（Firebase Hosting） | [rururena6607/CPRHomePage](https://github.com/rururena6607/CPRHomePage) | [cprbeat-5150c.web.app](https://cprbeat-5150c.web.app) |
 | **PBL-B** | 工場の稼働音を解析して塗装機の動作回数を自動カウント（Python） | [rururena6607/PBL-B](https://github.com/rururena6607/PBL-B) | — |
 
 ---
@@ -37,6 +38,34 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+
+---
+
+### CPR BEAT 公式サイト
+
+[![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/CPRHomePage)
+[![Site](https://img.shields.io/badge/公開サイト-cprbeat--5150c.web.app-FFCA28?style=flat&logo=firebase&logoColor=black)](https://cprbeat-5150c.web.app)
+
+> **CPR訓練システム「CPR BEAT」のコーポレートサイト。ライブラリを使わず素のHTML/CSS/JavaScriptで構築し、Firebase Hostingで配信**
+
+**担当**
+
+設計・実装・デプロイまで単独で開発。
+
+**技術的なポイント**
+- トップページ初回訪問時に、Canvasで心電図の波形をリアルタイム描画するスプラッシュ演出（波形のピークとハートの拍動を同期、Retina対応で2倍解像度描画）
+- `sessionStorage` で再訪問時はスプラッシュをスキップ。加えて最長3秒のフェイルセーフを置き、描画性能や画面幅によってコンテンツ到達が妨げられないよう保証
+- 画像をWebP・動画をWebM（VP9 + Opus）に統一。変換はffmpegを呼ぶ自作の一括スクリプトで実施
+- 静的アセットへの長期キャッシュヘッダ付与、`IntersectionObserver` によるスクロール連動アニメーション
+- 料金プランはPCではグリッド、モバイルでは横スクロール＋中央カード自動アクティブ化に切り替わる比較UI
+
+**使用技術**
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Firebase](https://img.shields.io/badge/Firebase_Hosting-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ---
 
@@ -69,6 +98,8 @@
 ### CPR BEAT — CPR訓練システム
 
 > **「救命講習をより楽しく、スマートに。」リズムゲーム感覚で胸骨圧迫の正しいリズムと深さを身体で覚えられる、高専発のCPRトレーニングシステム**
+
+※ 本体のソースコードは非公開ですが、[公式サイト](https://github.com/rururena6607/CPRHomePage)は単独で開発しコードを公開しています。
 
 **担当**
 
