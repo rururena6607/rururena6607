@@ -13,7 +13,7 @@
 | プロジェクト | 概要 | ソースコード | 公開サイト |
 |---|---|---|---|
 | **もふっと** | 保護犬猫の「推し活」プラットフォーム（Next.js / TypeScript） | [rururena6607/mofutto](https://github.com/rururena6607/mofutto) | [mofutto.vercel.app](https://mofutto.vercel.app) |
-| **CPR BEAT 公式サイト** | 素のHTML/CSS/JSで構築した静的サイト（Firebase Hosting） | [rururena6607/CPRHomePage](https://github.com/rururena6607/CPRHomePage) | [cprbeat-5150c.web.app](https://cprbeat-5150c.web.app) |
+| **CPR BEAT 公式サイト** | 素のHTML/CSS/JSで構築した静的サイト（Firebase Hosting） | [rururena6607/CPRBEATwebsite](https://github.com/rururena6607/CPRBEATwebsite) | [cprbeat-5150c.web.app](https://cprbeat-5150c.web.app) |
 | **PBL-B** | 工場の稼働音を解析して塗装機の動作回数を自動カウント（Python） | [rururena6607/PBL-B](https://github.com/rururena6607/PBL-B) | — |
 
 ---
