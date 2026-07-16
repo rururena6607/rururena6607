@@ -12,9 +12,9 @@
 
 | プロジェクト | 概要 | ソースコード | 公開サイト | スライド |
 |---|---|---|---|---|
-| **もふっと** | 保護犬猫の「推し活」プラットフォーム（Next.js / TypeScript） | [rururena6607/mofutto](https://github.com/rururena6607/mofutto) | [mofutto.vercel.app](https://mofutto.vercel.app) | [Canva](https://canva.link/mjis63bg8rc0i8c) |
+| **もふっと** | 保護犬猫の「推し活」プラットフォーム（Next.js / TypeScript） | [rururena6607/mofutto](https://github.com/rururena6607/mofutto) | [mofutto.vercel.app](https://mofutto.vercel.app) | [発表スライド（19ページ）](https://canva.link/mjis63bg8rc0i8c) |
 | **CPR BEAT 公式サイト** | 素のHTML/CSS/JSで構築した静的サイト（Firebase Hosting） | [rururena6607/CPRBEATwebsite](https://github.com/rururena6607/CPRBEATwebsite) | [cprbeat-5150c.web.app](https://cprbeat-5150c.web.app) | — |
-| **PBL-B** | 工場の稼働音を解析して塗装機の動作回数を自動カウント（Python） | [rururena6607/PBL-B](https://github.com/rururena6607/PBL-B) | — | [Canva](https://canva.link/ha6acgbabmh01le) |
+| **PBL-B** | 工場の稼働音を解析して塗装機の動作回数を自動カウント（Python） | [rururena6607/PBL-B](https://github.com/rururena6607/PBL-B) | — | [発表スライド（36ページ）](https://canva.link/ha6acgbabmh01le) |
 
 ---
 
@@ -22,7 +22,7 @@
 
 [![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/mofutto)
 [![Demo](https://img.shields.io/badge/デモ-mofutto.vercel.app-000000?style=flat&logo=vercel&logoColor=white)](https://mofutto.vercel.app)
-[![Slides](https://img.shields.io/badge/スライド-Canva-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/mjis63bg8rc0i8c)
+[![Slides](https://img.shields.io/badge/発表スライド-19ページ-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/mjis63bg8rc0i8c)
 
 > **保護犬猫を「アイドルのように推せる」プラットフォーム。「寄付」ではなく「推す・贈る・応援する」体験で、一頭ずつの個性と物語を主役にする**
 
@@ -73,7 +73,7 @@
 ### PBL-B — エアレスポンプ稼働音声解析システム
 
 [![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/PBL-B)
-[![Slides](https://img.shields.io/badge/スライド-Canva-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/ha6acgbabmh01le)
+[![Slides](https://img.shields.io/badge/発表スライド-36ページ-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/ha6acgbabmh01le)
 
 > **防爆室内にセンサーを設置できない工場環境において、室外から録音した音声データを解析し、塗装機の稼働回数を自動カウントするデスクトップ解析ツール**（大学PBL授業における企業連携プロジェクト）
 
@@ -133,7 +133,7 @@
 
 ### CPR DASH — AED緊急出動管理システム
 
-[![Slides](https://img.shields.io/badge/スライド-Canva-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/95q0rkfy870015k)
+[![Slides](https://img.shields.io/badge/発表スライド-27ページ-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/95q0rkfy870015k)
 
 > **管理者がマップ上で事故現場を指定すると、半径500m以内のAEDボックス（ESP32）がLED点滅・音声アラートで自動通知し、救助者をナビゲートするリアルタイム救急支援システム**
 
