@@ -10,11 +10,11 @@
 
 コードを公開している3件です。それぞれのリポジトリに、設計意図・技術的な工夫をまとめたREADMEを置いています。
 
-| プロジェクト | 概要 | ソースコード | 公開サイト |
-|---|---|---|---|
-| **もふっと** | 保護犬猫の「推し活」プラットフォーム（Next.js / TypeScript） | [rururena6607/mofutto](https://github.com/rururena6607/mofutto) | [mofutto.vercel.app](https://mofutto.vercel.app) |
-| **CPR BEAT 公式サイト** | 素のHTML/CSS/JSで構築した静的サイト（Firebase Hosting） | [rururena6607/CPRBEATwebsite](https://github.com/rururena6607/CPRBEATwebsite) | [cprbeat-5150c.web.app](https://cprbeat-5150c.web.app) |
-| **PBL-B** | 工場の稼働音を解析して塗装機の動作回数を自動カウント（Python） | [rururena6607/PBL-B](https://github.com/rururena6607/PBL-B) | — |
+| プロジェクト | 概要 | ソースコード | 公開サイト | スライド |
+|---|---|---|---|---|
+| **もふっと** | 保護犬猫の「推し活」プラットフォーム（Next.js / TypeScript） | [rururena6607/mofutto](https://github.com/rururena6607/mofutto) | [mofutto.vercel.app](https://mofutto.vercel.app) | [Canva](https://canva.link/mjis63bg8rc0i8c) |
+| **CPR BEAT 公式サイト** | 素のHTML/CSS/JSで構築した静的サイト（Firebase Hosting） | [rururena6607/CPRBEATwebsite](https://github.com/rururena6607/CPRBEATwebsite) | [cprbeat-5150c.web.app](https://cprbeat-5150c.web.app) | — |
+| **PBL-B** | 工場の稼働音を解析して塗装機の動作回数を自動カウント（Python） | [rururena6607/PBL-B](https://github.com/rururena6607/PBL-B) | — | [Canva](https://canva.link/ha6acgbabmh01le) |
 
 ---
 
