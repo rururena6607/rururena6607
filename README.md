@@ -22,6 +22,7 @@
 
 [![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/mofutto)
 [![Demo](https://img.shields.io/badge/デモ-mofutto.vercel.app-000000?style=flat&logo=vercel&logoColor=white)](https://mofutto.vercel.app)
+[![Slides](https://img.shields.io/badge/スライド-Canva-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/mjis63bg8rc0i8c)
 
 > **保護犬猫を「アイドルのように推せる」プラットフォーム。「寄付」ではなく「推す・贈る・応援する」体験で、一頭ずつの個性と物語を主役にする**
 
@@ -72,6 +73,7 @@
 ### PBL-B — エアレスポンプ稼働音声解析システム
 
 [![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/PBL-B)
+[![Slides](https://img.shields.io/badge/スライド-Canva-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/ha6acgbabmh01le)
 
 > **防爆室内にセンサーを設置できない工場環境において、室外から録音した音声データを解析し、塗装機の稼働回数を自動カウントするデスクトップ解析ツール**（大学PBL授業における企業連携プロジェクト）
 
@@ -130,6 +132,8 @@
 ---
 
 ### CPR DASH — AED緊急出動管理システム
+
+[![Slides](https://img.shields.io/badge/スライド-Canva-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/95q0rkfy870015k)
 
 > **管理者がマップ上で事故現場を指定すると、半径500m以内のAEDボックス（ESP32）がLED点滅・音声アラートで自動通知し、救助者をナビゲートするリアルタイム救急支援システム**
 
