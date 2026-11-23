@@ -1,26 +1,34 @@
 <h1 align="center">Hi 👋 I'm HIROSHI</h1>
 
-<p align="center"><b>要件定義から実装・検証・公開まで、実際に使われるものを作っています。</b></p>
+<p align="center"><b>要件定義から設計・実装・検証・公開まで、一通り自分の手で進めることを大切にしています。</b></p>
 
-- 🏆 CPR訓練システム「CPR BEAT」で **全国高専プログラミングコンテスト 最優秀賞・文部科学大臣賞**（チーム開発・最適化と機能追加を担当）
-- 💼 福祉事業所の業務システムを **Excel VBA → C# / WPF** に置き換え。請求CSVが旧システムと **実データで完全一致**
-- 🤝 チーム開発では **サーバ・データ層（Supabase / Firebase・認証・セキュリティルール）** を担当することが多い
-- 🤖 Claude Code を使い、**要件定義書 → 実装計画 → 実装 → 別の視点でのレビュー** の流れで開発
+- 💼 福祉事業所の業務システムを **Excel VBA → C# / WPF** に置き換え。請求CSVが旧システムと **実データで完全一致** することを確認
+- 🤝 チーム開発では **サーバ・データ層**（Supabase / Firebase の設計、認証、セキュリティルール）を担当することが多い
+- 🌐 Web（React / Next.js）、Android（Java）、デスクトップ（C# / WPF）、IoT（ESP32）、信号処理（Python）まで、目的に合わせて技術を選ぶ
+- 🤖 Claude Code を使い、**要件定義書 → 実装計画 → 実装 → 実装者とは別の視点でのレビュー** の流れで開発
 
 ---
 
-## 📂 ソースコードが見られるプロジェクト
+## 📋 作品一覧
 
-コードを公開している4件です。それぞれのリポジトリに、設計意図・技術的な工夫をまとめたREADMEを置いています。
-
-| プロジェクト | 概要 | ソースコード | 公開サイト | スライド |
+| 作品 | 内容 | 体制・担当 | 主な技術 | リンク |
 |---|---|---|---|---|
-| **バレー部 分析アプリ** | 試合中にスマホで記録し、集計・AIコメント・LINE通知で振り返る（React / Supabase / Claude API / LINE、3人チーム） | [rururena6607/KazuoLovers](https://github.com/rururena6607/KazuoLovers) | [kazuo-lovers.vercel.app](https://kazuo-lovers.vercel.app) | — |
-| **もふっと** | 保護犬猫の「推し活」プラットフォーム（Next.js / TypeScript） | [rururena6607/mofutto](https://github.com/rururena6607/mofutto) | [mofutto.vercel.app](https://mofutto.vercel.app) | [発表スライド（19ページ）](https://canva.link/mjis63bg8rc0i8c) |
-| **CPR BEAT 公式サイト** | 素のHTML/CSS/JSで構築した静的サイト（Firebase Hosting） | [rururena6607/CPRBEATwebsite](https://github.com/rururena6607/CPRBEATwebsite) | [cprbeat-5150c.web.app](https://cprbeat-5150c.web.app) | — |
-| **PBL-B** | 工場の稼働音を解析して塗装機の動作回数を自動カウント（Python） | [rururena6607/PBL-B](https://github.com/rururena6607/PBL-B) | — | [発表スライド（36ページ）](https://canva.link/ha6acgbabmh01le) |
+| **[バレー部 分析アプリ](#バレー部-サーブレシーブアタック分析アプリ)** | 試合中にスマホで記録し、集計・AIコメント・LINE通知で振り返る | 3人／データ・サーバ側 | React, Supabase, Claude API, LINE | [コード](https://github.com/rururena6607/KazuoLovers) · [サイト](https://kazuo-lovers.vercel.app) |
+| **[もふっと](#もふっと--ペット推し活プラットフォーム)** | 保護犬猫を「推す」体験で支援につなげるプラットフォーム | 個人 | Next.js, TypeScript, Firebase | [コード](https://github.com/rururena6607/mofutto) · [サイト](https://mofutto.vercel.app) · [スライド](https://canva.link/mjis63bg8rc0i8c) |
+| **[PBL-B](#pbl-b--エアレスポンプ稼働音声解析システム)** | 工場の稼働音から塗装機の動作回数を自動カウント（企業連携） | 個人 | Python, NumPy, SciPy | [コード](https://github.com/rururena6607/PBL-B) · [スライド](https://canva.link/ha6acgbabmh01le) |
+| **[CPR BEAT 公式サイト](#cpr-beat-公式サイト)** | ライブラリを使わずに作った静的サイト | 個人 | HTML, CSS, JavaScript | [コード](https://github.com/rururena6607/CPRBEATwebsite) · [サイト](https://cprbeat-5150c.web.app) |
+| **[業務システム](#福祉事業所の業務システム受託開発)** 🔒 | 福祉事業所の Excel VBA システムを Windows アプリに置き換え | 個人（Claude Code と開発） | C#, .NET 8 WPF, SQLite | — |
+| **[CPR DASH](#cpr-dash--aed緊急出動管理システム)** 🔒 | 事故現場近くの AED ボックスが光と音で知らせる救急支援システム | チーム／ハードウェア以外 | React, Firebase, ESP32 | [スライド](https://canva.link/95q0rkfy870015k) |
+| **[陣取りアプリ](#陣取りアプリ--歩いた軌跡で陣地を取る-android-アプリ)** 🔒 | 歩いた軌跡で囲んだ範囲が陣地になる（自治体連携PBL） | 4人／全画面・サーバ側 | Java, Android, Firestore | — |
+| **[ドローンエミュレーター](#ドローンエミュレーター)** 🔒 | 実機なしでドローン制御プログラムを試せるシミュレーター | 個人 | Python, NumPy, three.js | — |
+| **[NITK365](#nitk365--高専生活ポータルアプリ)** 🔒 | 行事・課題・学食などをまとめた学生生活ポータル | 4人 | Next.js, Supabase | — |
+| **[CPR BEAT](#cpr-beat--cpr訓練システム途中参加)** 🔒 | リズムゲーム感覚の CPR 訓練システム | 途中参加／最適化・機能追加 | Unity, C#, ESP32 | — |
+
+🔒 はソースコード非公開（下に詳細を書いています）
 
 ---
+
+## 📂 ソースコードを公開している作品
 
 ### バレー部 サーブ・レシーブ・アタック分析アプリ
 
@@ -63,6 +71,10 @@
 
 > **保護犬猫を「アイドルのように推せる」プラットフォーム。「寄付」ではなく「推す・贈る・応援する」体験で、一頭ずつの個性と物語を主役にする**
 
+**担当**
+
+企画・設計・実装・デプロイまで単独で開発。
+
 **主な機能**
 - 推し活フィード：推せる子の一覧（推し数・性格タグ・物語）
 - 子の詳細：性格まるわかりカードと物語、応援／迎えるCTA
@@ -76,6 +88,35 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+
+---
+
+### PBL-B — エアレスポンプ稼働音声解析システム
+
+[![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/PBL-B)
+[![Slides](https://img.shields.io/badge/発表スライド-36ページ-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/ha6acgbabmh01le)
+
+> **防爆室内にセンサーを設置できない工場環境において、室外から録音した音声データを解析し、塗装機の稼働回数を自動カウントするデスクトップ解析ツール**（高専のPBL授業における企業連携プロジェクト）
+
+**担当**
+
+解析手法の検討から実装・検証まで単独で開発。
+
+**主な機能**
+- WAVファイルの一括バッチ解析・稼働イベント自動検出
+- 15〜20kHz帯域パスフィルタによる金属音ノイズ除去
+- クレストファクタを用いたファイル事前スクリーニング
+- 動的閾値調整（局所ノイズレベルに適応）
+- 波形ビューア・エンベロープ表示・ピーク可視化
+- タイムスタンプ付きCSVエクスポート
+
+**検証実績:** 1分間音声125ファイル・合計3,852回の稼働検出
+
+**使用技術**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat&logo=scipy&logoColor=white)
 
 ---
 
@@ -107,32 +148,7 @@
 
 ---
 
-### PBL-B — エアレスポンプ稼働音声解析システム
-
-[![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/PBL-B)
-[![Slides](https://img.shields.io/badge/発表スライド-36ページ-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/ha6acgbabmh01le)
-
-> **防爆室内にセンサーを設置できない工場環境において、室外から録音した音声データを解析し、塗装機の稼働回数を自動カウントするデスクトップ解析ツール**（大学PBL授業における企業連携プロジェクト）
-
-**主な機能**
-- WAVファイルの一括バッチ解析・稼働イベント自動検出
-- 15〜20kHz帯域パスフィルタによる金属音ノイズ除去
-- クレストファクタを用いたファイル事前スクリーニング
-- 動的閾値調整（局所ノイズレベルに適応）
-- 波形ビューア・エンベロープ表示・ピーク可視化
-- タイムスタンプ付きCSVエクスポート
-
-**検証実績:** 1分間音声125ファイル・合計3,852回の稼働検出
-
-**使用技術**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
-![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat&logo=scipy&logoColor=white)
-
----
-
-## 🔒 その他の開発実績（ソースコード非公開）
+## 🔒 ソースコード非公開の作品
 
 ### 福祉事業所の業務システム（受託開発）
 
@@ -155,37 +171,30 @@
 
 ---
 
-### CPR BEAT — CPR訓練システム
+### CPR DASH — AED緊急出動管理システム
 
-> **「救命講習をより楽しく、スマートに。」リズムゲーム感覚で胸骨圧迫の正しいリズムと深さを身体で覚えられる、高専発のCPRトレーニングシステム**
+[![Slides](https://img.shields.io/badge/発表スライド-27ページ-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/95q0rkfy870015k)
 
-※ 本体のソースコードは非公開ですが、[公式サイト](https://github.com/rururena6607/CPRBEATwebsite)は単独で開発しコードを公開しています。
+> **管理者がマップ上で事故現場を指定すると、半径500m以内のAEDボックス（ESP32）がLED点滅・音声アラートで自動通知し、救助者をナビゲートするリアルタイム救急支援システム**
 
 **担当**
 
-初期開発者ではなく、既存コードベースへの参加メンバーとして最適化・機能追加・バグ修正を担当。
+ハードウェア以外（管理者Webアプリ、Firebase の設計、ESP32 のプログラム、救助者向けナビゲーション）を担当。
 
-- **消費電力の大幅削減**（処理ロジック見直しによる最適化）
-- **ゲーム時間の可変化**と、それに伴うUIの設計・実装
-- 既存ロジックのバグ修正
-
-**プロダクトの機能**
-- リアルタイムフィードバックで圧迫のリズム・深さを採点（Hampel法による独自ノイズ除去アルゴリズムで高精度判定）
-- 既存の訓練人形に後付けできるラック＆ピニオン式の外付け深度センサー（低コスト・高精度）
-- QRコードでトレーニング結果をスマホに保存、成長をグラフ化。緊急時マニュアル・クイズ機能も搭載
-
-**プロジェクト受賞歴**
-- 第36回全国高等専門学校プログラミングコンテスト **最優秀賞・文部科学大臣賞** ほか（情報処理学会／電子情報通信学会 若手奨励賞、チームラボ企業賞、NICT賞）
-- BCN ITジュニア賞
-- 令和7年度 起業家甲子園 NICT理事長賞・SGインキュベート賞
+**主な機能**
+- 管理者Webアプリから事故現場をマップ指定 → Firebase経由でAED端末へリアルタイム配信
+- ESP32デバイスがLED（NeoPixel 24灯）と音声で現場アラートを発報
+- NFCタグにタッチで救助者スマホにナビゲーション表示
+- Firebase Realtime Database による双方向データ同期
 
 **使用技術**
 
-![Unity](https://img.shields.io/badge/Unity-100000?style=flat&logo=unity&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=flat&logo=leaflet&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
-![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ---
 
@@ -231,32 +240,13 @@
 
 ---
 
-### CPR DASH — AED緊急出動管理システム
-
-[![Slides](https://img.shields.io/badge/発表スライド-27ページ-00C4CC?style=flat&logo=canva&logoColor=white)](https://canva.link/95q0rkfy870015k)
-
-> **管理者がマップ上で事故現場を指定すると、半径500m以内のAEDボックス（ESP32）がLED点滅・音声アラートで自動通知し、救助者をナビゲートするリアルタイム救急支援システム**
-
-**主な機能**
-- 管理者Webアプリから事故現場をマップ指定 → Firebase経由でAED端末へリアルタイム配信
-- ESP32デバイスがLED（NeoPixel 24灯）と音声で現場アラートを発報
-- NFCタグにタッチで救助者スマホにナビゲーション表示
-- Firebase Realtime Database による双方向データ同期
-
-**使用技術**
-
-![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
-![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=flat&logo=leaflet&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
-
----
-
 ### NITK365 — 高専生活ポータルアプリ
 
 > **「これ一つ開けば、学校の今がすべてわかる」。イベント・課題・学食・バス電車・部活動などを統合する、熊本高専の学生生活ポータル（Web）**
+
+**体制**
+
+4人チームで開発。
 
 **主な機能**
 - 学内Googleアカウント（`@g.kumamoto-nct.ac.jp`）限定のSSOログイン（学外アカウントは自動サインアウト）
@@ -274,6 +264,35 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+
+---
+
+### CPR BEAT — CPR訓練システム（途中参加）
+
+> **「救命講習をより楽しく、スマートに。」リズムゲーム感覚で胸骨圧迫の正しいリズムと深さを身体で覚えられる、高専発のCPRトレーニングシステム**
+
+※ 本体のソースコードは非公開ですが、[公式サイト](https://github.com/rururena6607/CPRBEATwebsite)は単独で開発しコードを公開しています。
+
+**担当**
+
+初期開発者ではなく、既存コードベースへの参加メンバーとして最適化・機能追加・バグ修正を担当。
+
+- **消費電力の大幅削減**（処理ロジック見直しによる最適化）
+- **ゲーム時間の可変化**と、それに伴うUIの設計・実装
+- 既存ロジックのバグ修正
+
+**プロダクトの機能**
+- リアルタイムフィードバックで圧迫のリズム・深さを採点（Hampel法による独自ノイズ除去アルゴリズムで高精度判定）
+- 既存の訓練人形に後付けできるラック＆ピニオン式の外付け深度センサー（低コスト・高精度）
+- QRコードでトレーニング結果をスマホに保存、成長をグラフ化。緊急時マニュアル・クイズ機能も搭載
+
+**使用技術**
+
+![Unity](https://img.shields.io/badge/Unity-100000?style=flat&logo=unity&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ---
 
@@ -320,7 +339,6 @@
 ![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=claude&logoColor=white)
 
 ---
-
 
 ## 📫 Contact
 
