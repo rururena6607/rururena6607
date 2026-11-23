@@ -2,6 +2,7 @@
 
 <p align="center"><b>要件定義から設計・実装・検証・公開まで、一通り自分の手で進めることを大切にしています。</b></p>
 
+- 🫀 CPR訓練システム「CPR BEAT」の本体ソフトを担当。**テストを 0 → 376 本** に増やしながら、採点ロジックの不具合を 24 件見つけて修正
 - 💼 福祉事業所の業務システムを **Excel VBA → C# / WPF** に置き換え。請求CSVが旧システムと **実データで完全一致** することを確認
 - 🤝 チーム開発では **サーバ・データ層**（Supabase / Firebase の設計、認証、セキュリティルール）を担当することが多い
 - 🌐 Web（React / Next.js）、Android（Java）、デスクトップ（C# / WPF）、IoT（ESP32）、信号処理（Python）まで、目的に合わせて技術を選ぶ
@@ -17,12 +18,12 @@
 | **[もふっと](#もふっと--ペット推し活プラットフォーム)** | 保護犬猫を「推す」体験で支援につなげるプラットフォーム | 個人 | Next.js, TypeScript, Firebase | [コード](https://github.com/rururena6607/mofutto) · [サイト](https://mofutto.vercel.app) · [スライド](https://canva.link/mjis63bg8rc0i8c) |
 | **[PBL-B](#pbl-b--エアレスポンプ稼働音声解析システム)** | 工場の稼働音から塗装機の動作回数を自動カウント（企業連携） | 個人 | Python, NumPy, SciPy | [コード](https://github.com/rururena6607/PBL-B) · [スライド](https://canva.link/ha6acgbabmh01le) |
 | **[CPR BEAT 公式サイト](#cpr-beat-公式サイト)** | ライブラリを使わずに作った静的サイト | 個人 | HTML, CSS, JavaScript | [コード](https://github.com/rururena6607/CPRBEATwebsite) · [サイト](https://cprbeat-5150c.web.app) |
+| **[CPR BEAT](#cpr-beat--cpr訓練システム)** 🔒 | センサで胸骨圧迫を採点する CPR 訓練システム | チーム／本体ソフトの主担当・サーバ | Unity, C#, Cloudflare Workers | — |
 | **[業務システム](#福祉事業所の業務システム受託開発)** 🔒 | 福祉事業所の Excel VBA システムを Windows アプリに置き換え | 個人（Claude Code と開発） | C#, .NET 8 WPF, SQLite | — |
 | **[CPR DASH](#cpr-dash--aed緊急出動管理システム)** 🔒 | 事故現場近くの AED ボックスが光と音で知らせる救急支援システム | チーム／ハードウェア以外 | React, Firebase, ESP32 | [スライド](https://canva.link/95q0rkfy870015k) |
 | **[陣取りアプリ](#陣取りアプリ--歩いた軌跡で陣地を取る-android-アプリ)** 🔒 | 歩いた軌跡で囲んだ範囲が陣地になる（自治体連携PBL） | 4人／全画面・サーバ側 | Java, Android, Firestore | — |
 | **[ドローンエミュレーター](#ドローンエミュレーター)** 🔒 | 実機なしでドローン制御プログラムを試せるシミュレーター | 個人 | Python, NumPy, three.js | — |
 | **[NITK365](#nitk365--高専生活ポータルアプリ)** 🔒 | 行事・課題・学食などをまとめた学生生活ポータル | 4人 | Next.js, Supabase | — |
-| **[CPR BEAT](#cpr-beat--cpr訓練システム途中参加)** 🔒 | リズムゲーム感覚の CPR 訓練システム | 途中参加／最適化・機能追加 | Unity, C#, ESP32 | — |
 
 🔒 はソースコード非公開（下に詳細を書いています）
 
@@ -150,6 +151,51 @@
 
 ## 🔒 ソースコード非公開の作品
 
+### CPR BEAT — CPR訓練システム
+
+> **「救命講習をより楽しく、スマートに。」センサで胸骨圧迫の深さとリズムを測り、リズムゲーム感覚で採点する CPR トレーニングシステム**
+
+**体制と担当**
+
+2026年3月にチームに参加し、7月からは **本体ソフト（Unity）の主担当**。あわせて、イベント版、ランキングサーバ、Web 版、公式サイトも開発しています（ハードウェアと XR 版は別のメンバーが担当）。
+
+**① 本体の品質改善：テストを 0 → 376 本、採点の不具合を発見して修正**
+- 139 ファイル・+16,000 行規模のリファクタリングで、Unity の外で動くテスト（NUnitLite）を整備し、**テストを 0 本から 376 本に**
+- 作業の途中で **採点ロジックの不具合を 24 件見つけて記録** し、影響の大きいものから修正
+  - 例：圧迫速度とリコイル速度が入れ替わって採点されていた → 修正し、過去データ 1,081 件の移行スクリプトも作成
+  - 例：毎拍の生データが 1/10 に書き換えられていた、窓平均の割る数の誤り、システム時刻の巻き戻り
+- 振る舞いを変えていないことを、シーンの GUID・シリアライズ済みフィールドのスナップショット比較で機械的に検証
+- 主要クラスを分割（例：424 → 108 行、204 → 90 行）。コンパイラ警告を 14 → 1 件に
+- アセットを整理して **プロジェクトサイズを 783MB → 323MB** に削減。Enter Play Mode Options を有効にして、エディタでの起動待ちを短縮
+- 参加直後は、リザルト画面の表示崩れ、ゲーム中の停止、2回目のプレイに前回のデータが残る、などのバグ修正と、メモリが溜まり続ける問題の解消、ゲーム時間の可変化を担当
+
+**② イベント出展版：対戦モードとランキング**
+- 1台の PC にセンサを2台つなぐ **1 対 1 対戦モード** を、要件定義から実装まで担当
+- 有線シリアルに加えて **BLE センサに対応**。入力をインターフェースで抽象化し、Windows（C++）と macOS（Objective-C++）のネイティブプラグインを用意
+- **ランキング・アカウントサーバ** を Cloudflare Workers + D1 + Durable Objects で構築し、本番で運用（Vitest 159 件・Playwright E2E 43 件）
+  - Google サインインの不具合（CSP / Referrer-Policy）を修正
+  - メンバー判定を「末尾一致」にすると誰でもメンバーになれてしまう問題に気づき、完全一致に変更
+- 会場にネットがなくても使えるよう、結果を **HMAC-SHA256 で署名して QR に入れ、あとでスマホから登録する方式** を設計
+
+**③ そのほか**
+- **Web 版 CPR BEAT**：Unity 版を React + TypeScript で作り直し、センサ（Web Serial）・カメラ（MediaPipe Pose）・タッチの3つの入力に対応（個人開発）
+- **公式サイト**：設計からデプロイまで単独で開発（[公開しているコード](https://github.com/rururena6607/CPRBEATwebsite)）。メンバーがブラウザから投稿できるブログ機能（Firebase Auth / Firestore）や、note 記事の自動同期（GitHub Actions）も追加
+- **チームの開発環境**：企画 → 設計 → 実装 → レビューを Claude Code のサブエージェントで回すプラグインを作り、チームで共有
+
+**使用技術**
+
+![Unity](https://img.shields.io/badge/Unity-100000?style=flat&logo=unity&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers_/_D1-F38020?style=flat&logo=cloudflare&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![ESP32](https://img.shields.io/badge/ESP32_(BLE)-E7352C?style=flat&logo=espressif&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat&logo=vitest&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white)
+
+---
+
 ### 福祉事業所の業務システム（受託開発）
 
 > **放課後等デイサービス事業所で使われていた Excel + VBA の業務システムを、Windows アプリ（C# / .NET 8 WPF + SQLite）に置き換え**
@@ -267,35 +313,6 @@
 
 ---
 
-### CPR BEAT — CPR訓練システム（途中参加）
-
-> **「救命講習をより楽しく、スマートに。」リズムゲーム感覚で胸骨圧迫の正しいリズムと深さを身体で覚えられる、高専発のCPRトレーニングシステム**
-
-※ 本体のソースコードは非公開ですが、[公式サイト](https://github.com/rururena6607/CPRBEATwebsite)は単独で開発しコードを公開しています。
-
-**担当**
-
-初期開発者ではなく、既存コードベースへの参加メンバーとして最適化・機能追加・バグ修正を担当。
-
-- **消費電力の大幅削減**（処理ロジック見直しによる最適化）
-- **ゲーム時間の可変化**と、それに伴うUIの設計・実装
-- 既存ロジックのバグ修正
-
-**プロダクトの機能**
-- リアルタイムフィードバックで圧迫のリズム・深さを採点（Hampel法による独自ノイズ除去アルゴリズムで高精度判定）
-- 既存の訓練人形に後付けできるラック＆ピニオン式の外付け深度センサー（低コスト・高精度）
-- QRコードでトレーニング結果をスマホに保存、成長をグラフ化。緊急時マニュアル・クイズ機能も搭載
-
-**使用技術**
-
-![Unity](https://img.shields.io/badge/Unity-100000?style=flat&logo=unity&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
-![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-
----
-
 ## 🛠️ Tech Stack
 
 **Frontend**
@@ -335,6 +352,7 @@
 
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
 ![Firebase Hosting](https://img.shields.io/badge/Firebase_Hosting-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat&logo=cloudflare&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=claude&logoColor=white)
 
