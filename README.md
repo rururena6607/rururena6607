@@ -1,15 +1,57 @@
-<h1 align="center">Hi 👋</h1>
+<h1 align="center">Hi 👋 I'm HIROSHI</h1>
+
+<p align="center"><b>要件定義から実装・検証・公開まで、実際に使われるものを作っています。</b></p>
+
+- 🏆 CPR訓練システム「CPR BEAT」で **全国高専プログラミングコンテスト 最優秀賞・文部科学大臣賞**（チーム開発・最適化と機能追加を担当）
+- 💼 福祉事業所の業務システムを **Excel VBA → C# / WPF** に置き換え。請求CSVが旧システムと **実データで完全一致**
+- 🤝 チーム開発では **サーバ・データ層（Supabase / Firebase・認証・セキュリティルール）** を担当することが多い
+- 🤖 Claude Code を使い、**要件定義書 → 実装計画 → 実装 → 別の視点でのレビュー** の流れで開発
+
 ---
 
 ## 📂 ソースコードが見られるプロジェクト
 
-コードを公開している3件です。それぞれのリポジトリに、設計意図・技術的な工夫をまとめたREADMEを置いています。
+コードを公開している4件です。それぞれのリポジトリに、設計意図・技術的な工夫をまとめたREADMEを置いています。
 
 | プロジェクト | 概要 | ソースコード | 公開サイト | スライド |
 |---|---|---|---|---|
+| **バレー部 分析アプリ** | 試合中にスマホで記録し、集計・AIコメント・LINE通知で振り返る（React / Supabase / Claude API / LINE、3人チーム） | [rururena6607/KazuoLovers](https://github.com/rururena6607/KazuoLovers) | [kazuo-lovers.vercel.app](https://kazuo-lovers.vercel.app) | — |
 | **もふっと** | 保護犬猫の「推し活」プラットフォーム（Next.js / TypeScript） | [rururena6607/mofutto](https://github.com/rururena6607/mofutto) | [mofutto.vercel.app](https://mofutto.vercel.app) | [発表スライド（19ページ）](https://canva.link/mjis63bg8rc0i8c) |
 | **CPR BEAT 公式サイト** | 素のHTML/CSS/JSで構築した静的サイト（Firebase Hosting） | [rururena6607/CPRBEATwebsite](https://github.com/rururena6607/CPRBEATwebsite) | [cprbeat-5150c.web.app](https://cprbeat-5150c.web.app) | — |
 | **PBL-B** | 工場の稼働音を解析して塗装機の動作回数を自動カウント（Python） | [rururena6607/PBL-B](https://github.com/rururena6607/PBL-B) | — | [発表スライド（36ページ）](https://canva.link/ha6acgbabmh01le) |
+
+---
+
+### バレー部 サーブ・レシーブ・アタック分析アプリ
+
+[![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/KazuoLovers)
+[![Demo](https://img.shields.io/badge/公開サイト-kazuo--lovers.vercel.app-000000?style=flat&logo=vercel&logoColor=white)](https://kazuo-lovers.vercel.app)
+
+> **バレー部の試合中に、サーブ・サーブレシーブ・アタックを1本2〜5タップで記録。選手別・ゾーン別に集計し、AIが練習アドバイスを書き、部のLINEグループに結果が届くWebアプリ**（授業「APIを用いた自由課題」、3人チーム）
+
+**担当：データ・サーバ側**
+- 3人が並行して作れるよう、画面・データ・計算の間の型の約束（`contracts`）を最初に設計
+- Supabase のテーブル設計と RLS（行レベルセキュリティ）、ログイン
+- 記録の保存・読み込みと、**体育館で電波が切れても記録が消えない送信待ち・自動再送**（IndexedDB）
+- Supabase Edge Function で Claude API を呼ぶ AI コメント（**外部AIには背番号と数値だけを送り、名前は送らない**）
+- LINE Messaging API の Webhook（Botへのメンションで試合結果を返信）と、公式戦終了時の自動投稿
+- Supabase Realtime による複数端末での同時記録
+
+**アプリの主な機能**
+- 着弾点を座標で保存し、ヒートマップ・散布図・コース割合で「相手が崩れやすい狙い所」「自チームが崩される場所」を可視化
+- セット別の結果・得点の推移、練習モード、紅白戦の記録、作戦ボード
+- PWA としてホーム画面に追加でき、iPhone / Android どちらでも同じURLで使える
+
+**使用技術**
+
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white)
+![Claude API](https://img.shields.io/badge/Claude_API-191919?style=flat&logo=anthropic&logoColor=white)
+![LINE](https://img.shields.io/badge/LINE_Messaging_API-00C300?style=flat&logo=line&logoColor=white)
+![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=flat&logo=pwa&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat&logo=vitest&logoColor=white)
 
 ---
 
@@ -39,7 +81,7 @@
 
 ### CPR BEAT 公式サイト
 
-[![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/CPRHomePage)
+[![Repo](https://img.shields.io/badge/ソースコード-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/rururena6607/CPRBEATwebsite)
 [![Site](https://img.shields.io/badge/公開サイト-cprbeat--5150c.web.app-FFCA28?style=flat&logo=firebase&logoColor=black)](https://cprbeat-5150c.web.app)
 
 > **CPR訓練システム「CPR BEAT」のコーポレートサイト。ライブラリを使わず素のHTML/CSS/JavaScriptで構築し、Firebase Hostingで配信**
@@ -92,11 +134,32 @@
 
 ## 🔒 その他の開発実績（ソースコード非公開）
 
+### 福祉事業所の業務システム（受託開発）
+
+> **放課後等デイサービス事業所で使われていた Excel + VBA の業務システムを、Windows アプリ（C# / .NET 8 WPF + SQLite）に置き換え**
+
+**ポイント**
+- **請求CSVをバイト単位で仕様化** し、移行したデータで **実運用の請求CSV（1か月分）と完全一致** することを確認してから画面の開発に進めた
+- 事業所内の共有フォルダに置いた SQLite を **複数台から同時に書き込む負荷試験**（`gate` / `stress` コマンド）を自作し、書き込み件数の一致を検証
+- アカウントとロール、月次締め、バックアップ、操作履歴、業務日誌、児童マスタ
+- 既存の Excel 帳票テンプレートのセルに値を書き込む方式で、記録票ほか7種類の帳票を印刷
+- 旧システムからのデータ移行スクリプト（Python）、CLI の `selftest` による自己検査
+- Claude Code を使って実装し、作業記録・レビュー記録・セキュリティレビューを文書で残しながら開発
+
+**使用技術**
+
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET_8_WPF-512BD4?style=flat&logo=dotnet&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+
+---
+
 ### CPR BEAT — CPR訓練システム
 
 > **「救命講習をより楽しく、スマートに。」リズムゲーム感覚で胸骨圧迫の正しいリズムと深さを身体で覚えられる、高専発のCPRトレーニングシステム**
 
-※ 本体のソースコードは非公開ですが、[公式サイト](https://github.com/rururena6607/CPRHomePage)は単独で開発しコードを公開しています。
+※ 本体のソースコードは非公開ですが、[公式サイト](https://github.com/rururena6607/CPRBEATwebsite)は単独で開発しコードを公開しています。
 
 **担当**
 
@@ -123,6 +186,48 @@
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
 ![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+
+---
+
+### 陣取りアプリ — 歩いた軌跡で陣地を取る Android アプリ
+
+> **市内を歩いた軌跡でループを閉じると、囲んだ範囲が自分の陣地になる。自治体（合志市）との連携PBLで、市の健康アプリ『うぇるこ』の「歩数（量）」に「どこを歩いたか（面）」を足す拡張モジュールとして提案**（4人チーム）
+
+**担当：すべての画面とサーバ側**
+- 地図と陣地の描画、記録中画面、ランキング、チュートリアルなど **全画面と画面遷移・アプリ全体の見た目**
+- Firestore のリポジトリ層、トランザクション、**セキュリティルールとそのテスト**、週次リセット、チーム戦
+- Gradle マルチモジュールで **モジュールの境界＝担当の境界** にし、PRのレビュアーを「実装者以外の検証担当」に固定する運用
+
+**設計上の工夫**
+- 位置情報は端末内に留め、サーバへ送るのはポリゴン頂点とメッシュセルIDだけ。**記録開始から最初の150mを捨てて自宅の位置を隠す**
+- 面積・ループ判定は平面直角座標系（EPSG:6670）と JTS で計算
+- 発表用に、1か月後の盤面を早回しで再生するデモモード
+
+**使用技術**
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firestore-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Google Maps](https://img.shields.io/badge/Google_Maps_SDK-4285F4?style=flat&logo=googlemaps&logoColor=white)
+
+---
+
+### ドローンエミュレーター
+
+> **実機なしでドローン制御プログラムを開発・テストするための、クアッドコプターのエミュレーター。Tello SDK 風のテキストコマンド（UDP）で操作でき、既存の Tello 用コードをそのまま向けられる**
+
+**主な機能**
+- 6自由度の剛体物理（RK4 積分 500Hz）、位置→速度→姿勢→角速度のカスケード制御、風・突風（Ornstein–Uhlenbeck 過程）
+- IMU・気圧計・GPS・ToF などのセンサーノイズ、運動量理論によるバッテリー消費と電圧降下
+- テレメトリ CSV と、依存ライブラリなしの SVG グラフによる HTML フライトレポート
+- 同じ物理・制御を JavaScript に移植したブラウザ版（three.js）。6〜10歳向けのブロックプログラミング版と、高校の授業向けの本格版
+
+**使用技術**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=threedotjs&logoColor=white)
 
 ---
 
@@ -183,11 +288,21 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 
+**Mobile / Desktop**
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET_WPF-512BD4?style=flat&logo=dotnet&logoColor=white)
+
 **Backend / Data**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
+![Claude API](https://img.shields.io/badge/Claude_API-191919?style=flat&logo=anthropic&logoColor=white)
+![LINE](https://img.shields.io/badge/LINE_Messaging_API-00C300?style=flat&logo=line&logoColor=white)
 
 **Game / Embedded / IoT**
 
@@ -197,9 +312,12 @@
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
 ![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)
 
-**Infra**
+**Infra / Tools**
 
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+![Firebase Hosting](https://img.shields.io/badge/Firebase_Hosting-FFCA28?style=flat&logo=firebase&logoColor=black)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=claude&logoColor=white)
 
 ---
 
