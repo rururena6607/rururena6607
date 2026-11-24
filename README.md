@@ -306,7 +306,7 @@
 
 [![Demo](https://img.shields.io/badge/デモ-drone--flightlab.web.app-FFCA28?style=flat&logo=firebase&logoColor=black)](https://drone-flightlab.web.app/)
 
-> 💡 ブラウザ版のデモは **iPad に最適化** しています。iPad の Safari で開くのがおすすめです。
+> 💡 ブラウザ版のデモは **iPad に最適化** しています。
 
 > **実機なしでドローン制御プログラムを開発・テストするための、クアッドコプターのエミュレーター。Tello SDK 風のテキストコマンド（UDP）で操作でき、既存の Tello 用コードをそのまま向けられる**
 
