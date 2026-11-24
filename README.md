@@ -24,7 +24,7 @@
 | **[業務システム](#福祉事業所の業務システム受託開発)** 🔒 | 福祉事業所の Excel VBA システムを Windows アプリに置き換え | 個人（Claude Code と開発） | C#, .NET 8 WPF, SQLite | — |
 | **[CPR DASH](#cpr-dash--aed緊急出動管理システム)** 🔒 | 事故現場近くの AED ボックスが光と音で知らせる救急支援システム | チーム／ハードウェア以外 | React, Firebase, ESP32 | [スライド](https://canva.link/95q0rkfy870015k) |
 | **[陣取りアプリ](#陣取りアプリ--歩いた軌跡で陣地を取る-android-アプリ)** 🔒 | 歩いた軌跡で囲んだ範囲が陣地になる（自治体連携PBL） | 4人／全画面・サーバ側 | Java, Android, Firestore | — |
-| **[ドローンエミュレーター](#ドローンエミュレーター)** 🔒 | 実機なしでドローン制御プログラムを試せるシミュレーター | 個人 | Python, NumPy, three.js | — |
+| **[ドローンエミュレーター](#ドローンエミュレーター)** 🔒 | 実機なしでドローン制御プログラムを試せるシミュレーター | 個人 | Python, NumPy, three.js | [デモ（iPad 向け）](https://drone-flightlab.web.app/) |
 | **[NITK365](#nitk365--高専生活ポータルアプリ)** 🔒 | 行事・課題・学食などをまとめた学生生活ポータル | 4人 | Next.js, Supabase | — |
 
 🔒 はソースコード非公開（下に詳細を書いています）
@@ -304,13 +304,17 @@
 
 ### ドローンエミュレーター
 
+[![Demo](https://img.shields.io/badge/デモ-drone--flightlab.web.app-FFCA28?style=flat&logo=firebase&logoColor=black)](https://drone-flightlab.web.app/)
+
+> 💡 ブラウザ版のデモは **iPad に最適化** しています。iPad の Safari で開くのがおすすめです。
+
 > **実機なしでドローン制御プログラムを開発・テストするための、クアッドコプターのエミュレーター。Tello SDK 風のテキストコマンド（UDP）で操作でき、既存の Tello 用コードをそのまま向けられる**
 
 **主な機能**
 - 6自由度の剛体物理（RK4 積分 500Hz）、位置→速度→姿勢→角速度のカスケード制御、風・突風（Ornstein–Uhlenbeck 過程）
 - IMU・気圧計・GPS・ToF などのセンサーノイズ、運動量理論によるバッテリー消費と電圧降下
 - テレメトリ CSV と、依存ライブラリなしの SVG グラフによる HTML フライトレポート
-- 同じ物理・制御を JavaScript に移植したブラウザ版（three.js）。6〜10歳向けのブロックプログラミング版と、高校の授業向けの本格版
+- 同じ物理・制御を JavaScript に移植したブラウザ版（three.js、[公開中](https://drone-flightlab.web.app/)・iPad に最適化）。6〜10歳向けのブロックプログラミング版と、高校の授業向けの本格版
 
 **使用技術**
 
