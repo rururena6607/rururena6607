@@ -3,6 +3,7 @@
 <p align="center"><b>要件定義から設計・実装・検証・公開まで、一通り自分の手で進めることを大切にしています。</b></p>
 
 - 🫀 CPR訓練システム「CPR BEAT」の本体ソフトを担当。**テストを 0 → 376 本** に増やしながら、採点ロジックの不具合を 24 件見つけて修正
+- 🏁 ハッカソン **SPAJAM2026 で予選通過・本選出場**。本選では企画（原案）・MVP の実装・3D と音の制作・発表を担当
 - 💼 福祉事業所の業務システムを **Excel VBA → C# / WPF** に置き換え。請求CSVが旧システムと **実データで完全一致** することを確認
 - 🤝 チーム開発では **サーバ・データ層**（Supabase / Firebase の設計、認証、セキュリティルール）を担当することが多い
 - 🌐 Web（React / Next.js）、Android（Java）、デスクトップ（C# / WPF）、IoT（ESP32）、信号処理（Python）まで、目的に合わせて技術を選ぶ
@@ -19,6 +20,7 @@
 | **[PBL-B](#pbl-b--エアレスポンプ稼働音声解析システム)** | 工場の稼働音から塗装機の動作回数を自動カウント（企業連携） | 個人 | Python, NumPy, SciPy | [コード](https://github.com/rururena6607/PBL-B) · [スライド](https://canva.link/ha6acgbabmh01le) |
 | **[CPR BEAT 公式サイト](#cpr-beat-公式サイト)** | ライブラリを使わずに作った静的サイト | 個人 | HTML, CSS, JavaScript | [コード](https://github.com/rururena6607/CPRBEATwebsite) · [サイト](https://cprbeat-5150c.web.app) |
 | **[CPR BEAT](#cpr-beat--cpr訓練システム)** 🔒 | センサで胸骨圧迫を採点する CPR 訓練システム | チーム／本体ソフトの主担当・サーバ | Unity, C#, Cloudflare Workers | — |
+| **[SPAJAM2026](#spajam2026--予選通過本選出場)** 🔒 | ハッカソンで予選通過・本選出場。本選は救命をためらう気持ちをはずす体験アプリ「CPR CLEAR」 | 本選2人・予選3人／企画・実装・3Dと音・発表 | Kotlin, Jetpack Compose, Blender, Claude API | — |
 | **[業務システム](#福祉事業所の業務システム受託開発)** 🔒 | 福祉事業所の Excel VBA システムを Windows アプリに置き換え | 個人（Claude Code と開発） | C#, .NET 8 WPF, SQLite | — |
 | **[CPR DASH](#cpr-dash--aed緊急出動管理システム)** 🔒 | 事故現場近くの AED ボックスが光と音で知らせる救急支援システム | チーム／ハードウェア以外 | React, Firebase, ESP32 | [スライド](https://canva.link/95q0rkfy870015k) |
 | **[陣取りアプリ](#陣取りアプリ--歩いた軌跡で陣地を取る-android-アプリ)** 🔒 | 歩いた軌跡で囲んだ範囲が陣地になる（自治体連携PBL） | 4人／全画面・サーバ側 | Java, Android, Firestore | — |
@@ -196,6 +198,42 @@
 
 ---
 
+### SPAJAM2026 — 予選通過・本選出場
+
+> スマホアプリ開発ハッカソン **SPAJAM2026** に CPR BEAT のメンバーで出場。予選を通過し、本選（2026年11月・箱根）に出場しました。どちらも当日に出されたテーマから、企画・実装・発表までを決められた時間内で行います。
+
+#### 本選：CPR CLEAR — 「ためらい」をはずす救命体験アプリ（2人チーム）
+
+> **駅のホームで倒れた女性を一人称の視点で助ける体験アプリ。周りの人に119番・AED を頼み、胸骨圧迫をして、服をずらして AED のパッドを貼り、救急隊に引き継ぐ。** テーマ「色」から、「訴えられたら？」「疑われたら？」という思い込みを“色眼鏡”として描き、迷っている間に倒れた人のいのちの色が抜けていく形にした
+
+**担当：企画（原案）、MVP の実装、3D の絵と音の制作、プレゼン**
+- 女子生徒への AED のパッド使用率が低いという研究データから、「手技の訓練」ではなく **「ためらいをはずす」体験** という企画を立てた
+- 3D エンジンを使わず、Blender（Python スクリプト）で書き出した画像とカメラの値を使い、**Jetpack Compose の Canvas に一人称の3Dを描画**。スマホの回転ベクトルセンサーで周りを見まわせる
+- 効果音・環境音・駅のメロディを Python（numpy）で合成
+- 「青い服の方、119番お願いします」という呼びかけを端末内の音声認識で判定。通信なしで、入れてすぐ動く
+- 単体テストと、Robolectric で端末なしに各場面の画面を書き出して見た目を確かめるテスト
+- 本選に向けて、Claude Code が GitHub の Issue を順に実装・PR・マージし、止まったら別の PC が引き継ぐ **夜間自動開発の仕組み** をチームで用意
+
+#### 予選：スパにゃん119 — 119番通報の練習ゲーム（3人チーム）
+
+> **ランダムな時刻に倒れる「スパにゃん」を助けるため、AI 指令員と音声で模擬通報し、現在地の住所や周りの目印を正しく伝えられたかをスコアで振り返る育成型ゲーム。** テーマ「つなぐ」から、救命の連鎖の最初の輪である“通報”を日常で身につけられるようにした
+
+**担当：バックエンド関連と UI の修正**
+- 通報内容の採点ロジック（伝えた場所の採点を含む）と単体テスト
+- Claude API を使った AI 指令員のプロンプト設計と、実際の応答で確かめる評価テスト
+- AI 指令員の音声の事前合成（AITalk）、シナリオの追加、UI の演出
+
+**使用技術**
+
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-4285F4?style=flat&logo=jetpackcompose&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white)
+![Blender](https://img.shields.io/badge/Blender-E87D0D?style=flat&logo=blender&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Claude API](https://img.shields.io/badge/Claude_API-191919?style=flat&logo=anthropic&logoColor=white)
+
+---
+
 ### 福祉事業所の業務システム（受託開発）
 
 > **放課後等デイサービス事業所で使われていた Excel + VBA の業務システムを、Windows アプリ（C# / .NET 8 WPF + SQLite）に置き換え**
@@ -328,6 +366,7 @@
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET_WPF-512BD4?style=flat&logo=dotnet&logoColor=white)
 
